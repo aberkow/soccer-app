@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 016px;
+}
+
+ul {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 32px;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  display:block;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.match-container {
+  max-width: 480px;
+}
+
+.match-container > a {
+  display: block;
+  height: 0;
+  line-height: 0;
+  padding-bottom: 75%;
+  position: relative;
+}
+
+.match-container img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.match-container .button-play {
+  fill: red;
+  height: 62px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 62px;
+  z-index: 1;
+}
